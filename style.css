@@ -4,13 +4,24 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Superpixel';
+  src: url('assets/fonts/SuperPixel-m2L8j.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'Dracula';
+  src: url('assets/fonts/Dracul\ Hotel.ttf');
+}
+
+
 body {
   font-family: 'Outfit';
+  background-color: white;
 }
 
 nav {
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(25px);
+  background-color: white;
   display: flex;
   justify-content: space-between;
   padding-left: 5%;
@@ -20,13 +31,13 @@ nav {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 nav a span {
   font-size: 25px;
   font-weight: 600;
-  color: blue;
-  font-family: 'Poppins';
+  font-family: 'Superpixel';
   cursor: pointer;
 }
 
@@ -82,14 +93,93 @@ nav ul li a i {
 /* hero section */
 
 .home {
-  background-color: gray;
-  display: flex ;
+  padding-left: 10%;
+  padding-top: 50px;
+  padding-right: 10%;
+  display: flex;
+  height: 91vh;
+  background-image: url('assets/images/gaming-setup-with-laptop-desk.jpg');
+  background-size: cover;
 }
 
 .home .home-subtitle {
-  background-color: aqua;
+  justify-content: center;
+  padding-top: 15%;
+  height: 90%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+}
+
+.home .home-subtitle h1 {
+  font-size: 40px;
+  font-family: 'Superpixel';
+  color: white;
+}
+
+.home .home-subtitle p {
+  font-size: 25px;
+  color: white;
+  padding-bottom: 30px;
 }
 
 .home .home-image {
-  background-color: orange;
+  width:550px;
+  height: 90%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+}
+
+.home .home-image img {
+  width: 100%;
+  height: 100%;
+  border: 5%;
+}
+
+/* hero buttons */
+
+.home .home-subtitle .icon {
+  margin-left: 25%;
+  display: inline-flex;
+  column-gap: 20px;
+}
+
+.home .home-subtitle .icon a {
+  background-color: white;
+  padding: 10px 15px;
+  border: 2px solid purple;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+}
+
+.home .home-subtitle .icon a:hover {
+  color: white;
+  background-color: purple;
+  transition: 0.3s;
+}
+
+/* responsive */ 
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .home .home-image {
+    width: 100%;
+  }
+
+  .home .home-subtitle {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .home .home-subtitle .icon {
+    margin-left: 15%;
+  }
 }
