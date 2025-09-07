@@ -442,25 +442,33 @@ nav ul li a i {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* footer */
 
 footer {
   text-align: center;
-  color: rgb(109, 71, 71);
+  justify-content: center;
+  color: rgb(255, 255, 255);
   padding: 20px;
   font-size: 18px;
-  background-color: aqua;
-  font-weight: bold;
+  height: 25vh;
+  background-color: rgb(33, 1, 54);
+}
+
+footer hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 2px;
+  border-top: 1px solid rgb(255, 255, 255);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+footer p a {
+  color: rgb(33, 1, 54);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: bold;
+  color: white;
+  border: 2px solid white;
 }
