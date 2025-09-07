@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Superpixel';
+  src: url('assets/fonts/SuperPixel-m2L8j.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'Dracula';
+  src: url('assets/fonts/Dracul\ Hotel.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit';
+  background-color: white;
+}
+
+nav {
+  background-color: rgb(207, 205, 205);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a span {
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Superpixel';
+  color: rgb(33, 1, 54);
+}
+
+nav ul  {
+  display: flex;
+  column-gap: 40px;
+  justify-items: center;
+  text-align: center;
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(33, 1, 54);
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav ul li a i {
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* span responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+    color: rgb(33, 1, 54);
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+  }
+
+  #nav-links.active {
+    display: flex;
+    background-color: rgb(177, 171, 171);
+    padding-left: 6px;
+    padding-right: 6px;
+    row-gap: 10px;
+  }
+
+  nav a span {
+    font-size: 20px;
+  }
+}
+
+
+/* footer */
+
+footer {
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  font-size: 18px;
+  height: 25vh;
+  background-color: rgb(33, 1, 54);
+}
+
+footer hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 2px;
+  border-top: 1px solid rgb(255, 255, 255);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+footer p a {
+  color: rgb(33, 1, 54);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: bold;
+  color: white;
+  border: 2px solid white;
+}
