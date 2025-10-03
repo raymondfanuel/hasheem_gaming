@@ -17,22 +17,21 @@
     <a href=""><span>HASHEEM GAMING</span></a>
   </nav>
   
-  <form action="" method="post">
-    <div class="form-container">
-      <h2>GAMES ACCESS</h2>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Password</label>
-      <input type="password" name="password" id="password" required>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
+  <div id="loginForm">
+    <h2>Enter PIN to Login</h2>
+        <input type="password" id="pinInput" placeholder="Enter PIN" maxlength="4">
+        <br><br>
+        <button onclick="checkPin()">Login</button>
+        <div id="errorMessage" class="error" style="display: none;"></div>
+  </div>
+
+
 
   <footer>
     <p>Copyright &copy; 2024 HASHEEM GAMING. All rights reserved.</p>
     <hr>
     <p>Developed by <a href="">Ray</a></p>
   </footer>
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

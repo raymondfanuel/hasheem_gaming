@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #loginForm { display: block; }
+        #pageTwo { display: none; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>Enter PIN to Login</h2>
+        <input type="password" id="pinInput" placeholder="Enter PIN" maxlength="4">
+        <br><br>
+        <button onclick="checkPin()">Login</button>
+        <div id="errorMessage" class="error" style="display: none;"></div>
+    </div>
+
+    <div id="pageTwo">
+        <h2>Welcome to Page Two!</h2>
+        <p>You have successfully logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function checkPin() {
+            const pin = document.getElementById('pinInput').value;
+            const errorMsg = document.getElementById('errorMessage');
+            
+            if (pin === '1234') {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('pageTwo').style.display = 'block';
+                errorMsg.style.display = 'none';
+            } else {
+                errorMsg.textContent = 'Wrong PIN';
+                errorMsg.style.display = 'block';
+                document.getElementById('pinInput').value = ''; // Clear input
+            }
+        }
+
+        function logout() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('pageTwo').style.display = 'none';
+            document.getElementById('pinInput').value = '';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
