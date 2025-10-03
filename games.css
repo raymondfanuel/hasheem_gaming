@@ -140,6 +140,7 @@ footer p a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
+  row-gap: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 2%;
@@ -149,7 +150,6 @@ footer p a {
 .games-container {
   padding: 20px;
   background: hsla(0, 0%, 75%, 0.507);
-
 }
 
 .games-container h2 {
@@ -194,3 +194,4 @@ footer p a {
     row-gap: 5px;
   }
 }
+
