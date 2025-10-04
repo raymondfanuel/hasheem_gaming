@@ -11,6 +11,7 @@ const pin = document.getElementById('pinInput').value;
 const errorMsg = document.getElementById('errorMessage');
       
 if (pin === '1425') {
+  alert('Jiunge na Magroup yetu ya Whatsapp kwa msaada zaidi. Bonyeza okay kuendelea');
   window.location.href="games.html"
   errorMsg.style.display = 'none';
 } else {
