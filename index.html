@@ -4,6 +4,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="version.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
   </nav>
 
   <section class="home" id="home">
-    <div class="home-subtitle">
+    <div data-aos="fade-left" class="home-subtitle">
       <h1>HASHEEM GAMING</h1>
       <p>Gaming kwenye simu, PC na PS ni rahisi sana</p>
       <div class="icon">
@@ -39,7 +40,7 @@
         <a href="">mawasiliano</a>
       </div>
     </div>
-    <div class="home-image">
+    <div data-aos="fade-right" class="home-image">
       <img src="assets/images/callofduty-pic.jpg" alt="">
     </div>
   </section>
@@ -50,22 +51,22 @@
     </div>
     
     <div class="about-container">
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <img src="assets/images/tombraider-pic.jpg" alt="">
       </div>
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <img src="assets/images/gta 5 background.jpg" alt="">
       </div>
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <img src="assets/images/fifa 23.jpg" alt="">
       </div>
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <img src="assets/images/thelastofus.jpg" alt="">
       </div>
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <img src="assets/images/pub.jpg" alt="">
       </div>
-      <div class="about-content">
+      <div data-aos="fade-up" class="about-content">
         <p>OVER</p>
         <p>80+</p>
         <P>GAMES</P>
@@ -78,7 +79,7 @@
       <i class='bx  bx-gaming'  ></i>
     </div>
     <div class="maelekezo-body">
-      <div class="maelekezo-content">
+      <div data-aos="fade-right" class="maelekezo-content">
         <h2>VIFAA VINAVYOHITAJIKA</h2>
         <p>- Android</p>
         <p>4GB RAM OR ABOVE</p>
@@ -87,18 +88,18 @@
         <p>- PS</p>
         <p>3, 4 OR 5</p>
       </div>
-      <div class="maelekezo-content">
+      <div data-aos="fade-right" class="maelekezo-content">
         <h2>DEMO VIDEOS</h2>
         <a href="https://www.youtube.com/watch?v=Tpmb6ggxUDk" target="_blank">GTA V</a>
         <a href="https://www.youtube.com/shorts/MmzIOL7WXcc" target="_blank">FIFA 23</a>
         <a href="https://www.youtube.com/shorts/PUF_Xcchaec" target="_blank">LAST OF US</a>
         <a href="">CONFIRM MALIPO</a>
       </div>
-      <div class="maelekezo-content">
+      <div data-aos="fade-left" class="maelekezo-content">
         <h2>MAELEKEZO YA GAMES</h2>
         <p>KAMA UNATAKA GAMES utapata baada ya kuweka PIN hapo chini. Ndani kuna games tofauti na nzuri kama vile GTA V, Last of Us, Red Dead 2; pia kuna games za PS4/PS5 kwenye PS na PC.</p>
       </div>
-      <div class="maelekezo-content">
+      <div data-aos="fade-left" class="maelekezo-content">
         <h2>MALIPO</h2>
         <span class="span1">PS4/5 KWENYE SIMU: 5,000 TSH</span>
         <span class="span1">PS/PC: 10,000 TSH</span>
@@ -120,5 +121,9 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
