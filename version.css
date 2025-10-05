@@ -20,7 +20,7 @@ body {
 }
 
 nav {
-  background-color: rgb(207, 205, 205);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   padding-left: 5%;
@@ -30,7 +30,7 @@ nav {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 nav a {
@@ -50,7 +50,6 @@ nav ul  {
   column-gap: 40px;
   justify-items: center;
   text-align: center;
-  margin-top: 5px;
   list-style-type: none;
 }
 
@@ -81,6 +80,11 @@ nav ul li a i {
     color: rgb(33, 1, 54);
   }
 
+  nav {
+    position: sticky;
+    top: 0;
+  }
+
   nav ul {
     display: none;
     position: absolute;
@@ -91,7 +95,7 @@ nav ul li a i {
 
   #nav-links.active {
     display: flex;
-    background-color: rgb(177, 171, 171);
+    background-color: rgb(255, 255, 255);
     padding-left: 6px;
     padding-right: 6px;
     row-gap: 10px;
@@ -105,18 +109,22 @@ nav ul li a i {
 /* home section */
 
 .home {
-  padding-left: 10%;
+  padding-left: 8%;
   padding-top: 50px;
-  padding-right: 10%;
+  padding-right: 8%;
   display: flex;
-  height: 91vh;
+  height: 95vh;
   background-image: url('assets/images/gaming-setup-with-laptop-desk.jpg');
   background-size: cover;
 }
 
 .home .home-subtitle {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 15%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
   height: 90%;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(25px);
@@ -156,20 +164,20 @@ nav ul li a i {
 }
 
 .home .home-subtitle .icon a {
-  background-color: white;
+  background-color: purple;
   padding: 10px 15px;
-  border: 1px solid purple;
+  border: 1px solid white;
   border-radius: 10px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: purple;
+  color: white;
 }
 
 .home .home-subtitle .icon a:hover {
-  color: white;
-  background-color: purple;
-  border: 1px solid white;
+  color: purple;
+  background-color: white;
+  border: 1px solid #800080;
   transition: 0.3s;
 }
 
@@ -179,13 +187,14 @@ nav ul li a i {
   .home {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
     height: 60vh;
     gap: 0;
-    padding-top: 0;
+    padding-top: 20px;
     padding-left: 0;
     padding-right: 0;
+    background-image: url('assets/images/hasheem-bg.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .home .home-image {
@@ -209,11 +218,21 @@ nav ul li a i {
     justify-content: center;
     text-align: center;
     z-index: 20;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    display: none;
+  }
+
+  .home .home-image {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .home .home-subtitle .icon {
     margin-left: 0;
     justify-content: center;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 
@@ -279,7 +298,7 @@ nav ul li a i {
 @media (max-width: 768px) {
   .about-container {
     display: grid;
-    margin-left: 2%;
+    margin-left: 1%;
     margin-right: 2%;
     margin-top: 20px;
     grid-template-columns: 1fr 1fr;
@@ -290,9 +309,6 @@ nav ul li a i {
   .about-container .about-content {
     background-color: white;
     height: auto;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
   }
 
   .about-container .about-content  p {
