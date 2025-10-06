@@ -8,6 +8,11 @@
   src: url('assets/fonts/Dracul\ Hotel.ttf');
 }
 
+@font-face {
+  font-family: 'BruceForever';
+  src: url('assets/fonts/BruceForeverRegular-X3jd2.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +20,10 @@
 }
 
 body {
-  font-family: 'Outfit';
-  background-color: white;
+  font-family: 'BruceForever';
+  background-image: url('assets/images/gamepad.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -38,10 +45,10 @@ nav a {
 }
 
 nav a span {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   cursor: pointer;
-  font-family: 'Superpixel';
+  font-family: 'BruceForever';
   color: rgb(33, 1, 54);
 }
 
@@ -149,17 +156,18 @@ footer p a {
 
 .games-container {
   padding: 20px;
-  background: hsla(0, 0%, 75%, 0.507);
+  background: #ffffffda;
 }
 
 .games-container h2 {
   text-align: center;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .games-container p {
   text-align: justify;
+  font-size: 12px;
 }
 
 .games-container i {
@@ -169,16 +177,16 @@ footer p a {
 .games-container .game-btn {
   display: flex;
   column-gap: 20px;
-  padding: 15px;
+  padding: 12px;
   justify-content: center;
 }
 
 .games-container .game-btn a {
-  background-color: blue;
+  background-color: rgb(33, 1, 54);;
   padding: 10px;
   text-decoration: none;
-  color: white;
-  font-size: 15px;
+  color: rgb(204, 199, 199);
+  font-size: 12px;
 }
 
 /* game page responsive */
