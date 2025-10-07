@@ -326,7 +326,9 @@
         <a href="https://steamrip.com/" target="_blank">PC GAMES</a>
       </div>
       <p style="font-weight: bold;">VIDEO YA MAELEKEZO</p>
-      <video src="assets/videos/hasheemv.mp4" controls></video>
+      <video id="my-video" src="assets/videos/hasheemv.mp4" controls poster="assets/images/callof-duty.jpg">
+        Your broswer does not support the video tag.
+      </video>
     </div>
   </section>
 
@@ -341,5 +343,21 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const video = document.getElementById("myVideo");
+      const source = video.querySelector("source");
+
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          source.src = source.getAttribute("data-src");
+          video.load();
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(video);
+    });
+  </script>
 </body>
 </html>
