@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/access", "destination": "/access.html" },
-    { "source": "/games", "destination": "/games.html" }
+    { "source": "/access.ray", "destination": "/access.html" },
+    { "source": "/games.ray", "destination": "/games.html" }
   ]
 }
