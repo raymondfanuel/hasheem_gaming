@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/access", "destination": "/access.html" },
-    { "source": "/games", "destination": "/games.html" }
+    { "source": "/games", "destination": "/games.html" },
+    { "source": "/game_pass", "destination": "/game_pass.txt" }
   ]
 }
