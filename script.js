@@ -21,7 +21,8 @@ try {
 
   if (data.success) {
     // ✅ Access granted
-    window.location.href = '/secure-page.html';
+    alert('Jiunge na Magroup yetu ya Whatsapp kwa msaada zaidi. Bonyeza okay kuendelea');
+    window.location.href = '/games.html';
   } else {
     errorMessage.textContent = data.message || 'Incorrect PIN!';
   }
@@ -31,25 +32,3 @@ try {
 }
 }
 
-
-// function checkPin() {
-// const pin = document.getElementById('pinInput').value;
-// const errorMsg = document.getElementById('errorMessage');
-      
-// if (pin === '1010') {
-//   alert('Jiunge na Magroup yetu ya Whatsapp kwa msaada zaidi. Bonyeza okay kuendelea');
-//   window.location.href="games.html"
-//   errorMsg.style.display = 'none';
-// } else {
-//   errorMsg.textContent = 'Wrong PIN';
-//   errorMsg.style.display = 'block';
-//   document.getElementById('pinInput').value = ''; // Clear input
-// }
-// }
-
-// function logout() {
-//   document.getElementById('loginForm').style.display = 'block';
-//   document.getElementById('pageTwo').style.display = 'none';
-//   document.getElementById('pinInput').value = '';
-//   document.getElementById('errorMessage').style.display = 'none';
-// }
