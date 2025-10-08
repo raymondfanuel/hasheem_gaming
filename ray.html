@@ -1,30 +1,40 @@
-<input type="password" id="pinInput" placeholder="Enter PIN">
-<button onclick="checkPin()">Login</button>
-<p id="errorMessage" style="color:red;"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Login</title>
+</head>
+<body>
+  <h2>Enter PIN to Access</h2>
+  <input type="password" id="pinInput" placeholder="Enter PIN">
+  <button onclick="checkPin()">Login</button>
+  <p id="errorMessage" style="color:red;"></p>
 
-<script>
-async function checkPin() {
-  const pin = document.getElementById('pinInput').value;
-  const errorMessage = document.getElementById('errorMessage');
+  <script>
+    async function checkPin() {
+      const pin = document.getElementById('pinInput').value;
+      const errorMessage = document.getElementById('errorMessage');
 
-  try {
-    const response = await fetch('/api/checkPin', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ pin })
-    });
+      try {
+        const response = await fetch('/api/checkPin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pin })
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (data.success) {
-      // ✅ Access granted
-      window.location.href = 'game_pass.html';
-    } else {
-      errorMessage.textContent = 'Incorrect PIN!';
+        if (data.success) {
+          // ✅ Access granted
+          window.location.href = '/secure-page.html';
+        } else {
+          errorMessage.textContent = data.message || 'Incorrect PIN!';
+        }
+      } catch (error) {
+        console.error('Fetch error:', error);
+        errorMessage.textContent = 'Something went wrong: ' + error.message;
+      }
     }
-  } catch (error) {
-    console.error(error);
-    errorMessage.textContent = 'Something went wrong!';
-  }
-}
-</script>
+  </script>
+</body>
+</html>
