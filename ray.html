@@ -1,0 +1,30 @@
+<input type="password" id="pinInput" placeholder="Enter PIN">
+<button onclick="checkPin()">Login</button>
+<p id="errorMessage" style="color:red;"></p>
+
+<script>
+async function checkPin() {
+  const pin = document.getElementById('pinInput').value;
+  const errorMessage = document.getElementById('errorMessage');
+
+  try {
+    const response = await fetch('/api/checkPin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      // ✅ Access granted
+      window.location.href = 'game_pass.html';
+    } else {
+      errorMessage.textContent = 'Incorrect PIN!';
+    }
+  } catch (error) {
+    console.error(error);
+    errorMessage.textContent = 'Something went wrong!';
+  }
+}
+</script>

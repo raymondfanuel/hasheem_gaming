@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background: #f5f5f5;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 3rem;
+  color: #007bff; /* change to your theme color */
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+</style>
+<body>
+    <section class="stats-section">
+  <div class="stat">
+    <h2 class="counter" data-target="1200">0</h2>
+    <p>Happy Users</p>
+  </div>
+  <div class="stat">
+    <h2 class="counter" data-target="50">0</h2>
+    <p>Services Provided</p>
+  </div>
+  <div class="stat">
+    <h2 class="counter" data-target="800">0</h2>
+    <p>Projects Completed</p>
+  </div>
+</section>
+
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 100; // smaller = faster
+
+  const startCounting = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+  counter.innerText = Math.ceil(count + increment);
+  setTimeout(updateCount, 20);
+} else {
+  counter.innerText = target + "+";
+}
+      };
+
+      updateCount();
+    });
+  };
+
+  // Use Intersection Observer so it starts only when visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startCounting();
+        observer.disconnect(); // run once
+      }
+    });
+  });
+
+  observer.observe(document.querySelector('.stats-section'));
+</script>
+</body>
+</html>
