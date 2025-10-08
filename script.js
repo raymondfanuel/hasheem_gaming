@@ -24,7 +24,7 @@ try {
     alert('Jiunge na Magroup yetu ya Whatsapp kwa msaada zaidi. Bonyeza okay kuendelea');
     window.location.href = '/games.html';
   } else {
-    errorMessage.textContent = data.message || 'Incorrect PIN!';
+    errorMessage.textContent = data.message || 'PIN SIO SAHIHI!';
   }
 } catch (error) {
   console.error('Fetch error:', error);
