@@ -20,11 +20,11 @@ try {
   const data = await response.json();
 
   if (data.success) {
-    // ✅ Access granted
     alert('Jiunge na Magroup yetu ya Whatsapp kwa msaada zaidi. Bonyeza okay kuendelea');
+    // ✅ Access granted
     window.location.href = '/games.html';
   } else {
-    errorMessage.textContent = data.message || 'PIN SIO SAHIHI!';
+    errorMessage.textContent = data.message || 'incorrect PIN!';
   }
 } catch (error) {
   console.error('Fetch error:', error);
