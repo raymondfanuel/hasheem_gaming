@@ -516,3 +516,47 @@ footer p a {
   color: white;
   border: 2px solid white;
 }
+
+
+/* counter */
+
+.stats-section {
+  font-family: 'BruceForever', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 3rem;
+  color: rgb(33, 1, 54);
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: rgb(33, 1, 54);
+}
+
+
+/* counter reponsive */
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 10px;
+  }
+
+  .stat h2 {
+    font-size: 2rem;
+  }
+
+  .stat p {
+    font-size: 1rem;
+  }
+}

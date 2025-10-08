@@ -187,6 +187,7 @@ footer p a {
   text-decoration: none;
   color: rgb(204, 199, 199);
   font-size: 12px;
+  border-radius: 3px;
 }
 
 /* game page responsive */
