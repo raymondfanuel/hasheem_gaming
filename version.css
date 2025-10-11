@@ -233,6 +233,10 @@ nav ul li a i {
     height: 100px;
   }
 
+  .home-subtitle h1, .home-subtitle p {
+    display: none;
+  }
+
   .home .home-subtitle {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -242,7 +246,6 @@ nav ul li a i {
     z-index: 20;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
-    display: none;
   }
 
   .home .home-image {
@@ -256,6 +259,13 @@ nav ul li a i {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
+
+  .home .home-subtitle .icon a {
+    font-size: 12px;
+    padding: 6px 8px;
+    margin-top: 450px;
+  }
+
 }
 
 
