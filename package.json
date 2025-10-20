@@ -1,5 +1,21 @@
 {
-  "dependencies": {
-    "uglify-js": "^3.19.3"
-  }
+  "name": "hasheem_gaming",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymondfanuel/hasheem_gaming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymondfanuel/hasheem_gaming/issues"
+  },
+  "homepage": "https://github.com/raymondfanuel/hasheem_gaming#readme",
+  "description": ""
 }
