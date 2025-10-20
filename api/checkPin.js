@@ -31,3 +31,6 @@ export default function handler(req, res) {
   // All other methods not allowed
   return res.status(405).json({ error: 'Method not allowed' });
 }
+
+
+// my api fixing
