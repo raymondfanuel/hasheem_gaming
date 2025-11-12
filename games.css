@@ -182,10 +182,10 @@ footer p a {
 }
 
 .games-container .game-btn a {
-  background-color: rgb(33, 1, 54);;
   padding: 10px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  background-color: rgb(78, 75, 75);
+  color: rgb(0, 0, 0);
   font-size: 12px;
 }
 
