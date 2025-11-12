@@ -187,7 +187,21 @@ footer p a {
   text-decoration: none;
   color: rgb(204, 199, 199);
   font-size: 12px;
-  border-radius: 3px;
+}
+
+.game-btn {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.game-btn .game-btn-container {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+
+.game-btn-container a {
+  margin-top: -35px;
 }
 
 /* game page responsive */
