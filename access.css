@@ -19,13 +19,22 @@ body {
   background-color: white;
   margin: 0;
   height: 100vh;
-  background-image: url('assets/images/gamepad.jpeg');
+  background-image: url('assets/games/grandtheftautoV.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.cover-gradient {
+  top: 0;
+  position: absolute;
+  background-image: linear-gradient(to right,transparent,rgba(0,0,0,0.8), transparent);
+  height: 100vh;
+  width: 100%;
 }
 
 
@@ -35,6 +44,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(11, 0, 41, 0.712);
   text-align: center;
+  z-index: 100;
 }
 
 #loginForm i {
