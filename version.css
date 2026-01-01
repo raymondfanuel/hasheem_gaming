@@ -37,6 +37,7 @@
 body {
   font-family: 'Outfit';
   background-color: white;
+  display: none;
 }
 
 nav {
