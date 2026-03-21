@@ -63,6 +63,11 @@ const speed = 300; // smaller = faster
       if (entry.isIntersecting) {
         startCounting();
         observer.disconnect(); // run once
+
+
+
+        // this is a comment
+    const ray = 'Raymond';
       }
     });
   });
